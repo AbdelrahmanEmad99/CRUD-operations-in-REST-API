@@ -1,0 +1,2 @@
+#ASP.NET Core Web API - CRUD Operations with Entity Framework Core and SQL Server
+#This repository contains a simple yet robust ASP.NET Core Web API project that demonstrates CRUD (Create, Read, Update, Delete) operations using Entity Framework Core and SQL Server. The project is designed to provide a foundational understanding of building RESTful APIs with ASP.NET Core and how to interact with a relational database using Entity Framework Core.
