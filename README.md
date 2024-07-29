@@ -3,8 +3,8 @@ This repository contains a simple yet robust ASP.NET Core Web API project that d
 
 
 # Features
-ASP.NET Core: Leverage the powerful ASP.NET Core framework to build a high-performance, cross-platform Web API.
-Entity Framework Core: Utilize EF Core for data access, with code-first migrations to manage the SQL Server database schema.
+* ASP.NET Core: Leverage the powerful ASP.NET Core framework to build a high-performance, cross-platform Web API.
+* Entity Framework Core: Utilize EF Core for data access, with code-first migrations to manage the SQL Server database schema.
 CRUD Operations: Implement Create, Read, Update, and Delete operations for managing entities.
 SQL Server: Integrate with SQL Server for reliable and scalable data storage.
 Swagger Integration: Explore and test your API endpoints using Swagger UI.
