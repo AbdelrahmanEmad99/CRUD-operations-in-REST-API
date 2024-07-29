@@ -87,16 +87,36 @@ namespace SuperHeroAPI.Controllers
 			_context.SuperHeros.Remove(hero);
 			await _context.SaveChangesAsync();
 
-			return Ok(await _context.SuperHeros.ToListAsync());//return NoContent
+			return Ok(await _context.SuperHeros.ToListAsync());//return NoContent()
 		}
 
 
 
+        [HttpGet("search")]
+        public async Task<ActionResult<List<SuperHero>>> SearchHeroes([FromQuery] string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return BadRequest("Search query cannot be empty");
+            }
+
+            var heroes = await _context.SuperHeros
+                .Where(hero => hero.Name.Contains(query) || hero.FirstName.Contains(query) || hero.LastName.Contains(query) || hero.Place.Contains(query))
+                .ToListAsync();
+
+            if (!heroes.Any())
+            {
+                return NotFound("No heroes found matching the search query");
+            }
+
+            return Ok(heroes);
+        }
 
 
 
 
 
 
-	}
+
+    }
 }
